@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FIndMyCongressCritter.xcodeproj">
+      location = "self:FindMyCongressCritter.xcodeproj">
    </FileRef>
 </Workspace>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		981D21331B81874700E0ABBA /* CongressCritter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 981D21321B81874700E0ABBA /* CongressCritter.jpg */; };
 		98597C2C1B7F1417001F6FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98597C2B1B7F1417001F6FDA /* AppDelegate.swift */; };
 		98597C2E1B7F1417001F6FDA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98597C2D1B7F1417001F6FDA /* MasterViewController.swift */; };
 		98597C301B7F1417001F6FDA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98597C2F1B7F1417001F6FDA /* DetailViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		981D21321B81874700E0ABBA /* CongressCritter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = CongressCritter.jpg; path = ../../FindMyCongressCritter/FIndMyCongressCritter/CongressCritter.jpg; sourceTree = "<group>"; };
 		98597C261B7F1417001F6FDA /* FIndMyCongressCritter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIndMyCongressCritter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98597C2A1B7F1417001F6FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98597C2B1B7F1417001F6FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		981D21311B81871D00E0ABBA /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+				981D21321B81874700E0ABBA /* CongressCritter.jpg */,
+			);
+			name = Artwork;
+			sourceTree = "<group>";
+		};
 		98597C1D1B7F1417001F6FDA = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 				98597C311B7F1417001F6FDA /* Main.storyboard */,
 				98597C341B7F1417001F6FDA /* Images.xcassets */,
 				98597C361B7F1417001F6FDA /* LaunchScreen.xib */,
+				981D21311B81871D00E0ABBA /* Artwork */,
 				98597C291B7F1417001F6FDA /* Supporting Files */,
 			);
 			path = FIndMyCongressCritter;
@@ -183,7 +194,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 98597C211B7F1417001F6FDA /* Build configuration list for PBXProject "FIndMyCongressCritter" */;
+			buildConfigurationList = 98597C211B7F1417001F6FDA /* Build configuration list for PBXProject "FindMyCongressCritter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -210,6 +221,7 @@
 				98597C331B7F1417001F6FDA /* Main.storyboard in Resources */,
 				98597C381B7F1417001F6FDA /* LaunchScreen.xib in Resources */,
 				98597C351B7F1417001F6FDA /* Images.xcassets in Resources */,
+				981D21331B81874700E0ABBA /* CongressCritter.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +425,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		98597C211B7F1417001F6FDA /* Build configuration list for PBXProject "FIndMyCongressCritter" */ = {
+		98597C211B7F1417001F6FDA /* Build configuration list for PBXProject "FindMyCongressCritter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				98597C451B7F1418001F6FDA /* Debug */,
@@ -429,6 +441,7 @@
 				98597C491B7F1418001F6FDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		98597C4A1B7F1418001F6FDA /* Build configuration list for PBXNativeTarget "FIndMyCongressCritterTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +450,7 @@
 				98597C4C1B7F1418001F6FDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,6 +1,6 @@
 //
 //  MasterViewController.swift
-//  FIndMyCongressCritter
+//  FindMyCongressCritter
 //
 //  Created by Darvell Hunt on 8/15/15.
 //  Copyright (c) 2015 Darvell Hunt. All rights reserved.
@@ -10,7 +10,6 @@ import UIKit
 
 class MasterViewController: UITableViewController, UISearchBarDelegate
 {
-
     var detailViewController: DetailViewController? = nil
     var objects = NSMutableArray()
     var searchBar = UISearchBar()
@@ -40,9 +39,8 @@ class MasterViewController: UITableViewController, UISearchBarDelegate
             let controllers = split.viewControllers
             self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
         }
-        
-        var instructions = CongressCritterData(name:"Enter a name, state, or zip code")
-        
+
+        // create an observer to listen for completed API calls
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "gotDataResponseObserver:", name: "CritterDataNotification", object: nil)
         
 //        NSNotificationCenter.defaultCenter().removeObserver(self, name: "NotificationIdentifier", object: nil)
@@ -90,6 +88,7 @@ class MasterViewController: UITableViewController, UISearchBarDelegate
     {
         var apiGetter = CongressCritterAPI()
         
+        // make an API call
         dispatch_async(dispatch_get_main_queue(),
         {
             //sample urlPath = "http://whoismyrepresentative.com/getall_mems.php?zip=84045&output=json"
@@ -103,6 +102,7 @@ class MasterViewController: UITableViewController, UISearchBarDelegate
                 // yes, zip code, so just search all names for zip code
                 var urlPath = self.urlMaker.useSearchStringToMakeURL(searchString: self.searchString, searchForSenator: false)
                 
+                // make API call for zip code
                 apiGetter.getJsonData(url: urlPath)
             }
             else
@@ -121,6 +121,7 @@ class MasterViewController: UITableViewController, UISearchBarDelegate
             }
         })
         
+        // clear the search bar text for the next search
         searchBar.text = ""
     }
     
@@ -129,13 +130,8 @@ class MasterViewController: UITableViewController, UISearchBarDelegate
     {
         var critterDataDictionary: NSDictionary
         critterDataDictionary = notification.object as NSDictionary
-
-        var critterDataArray: NSArray
-        
-//        critterDataArray = critterDataDictionary.valueForKey(key "results")
         
         let results = critterDataDictionary["results"]! as [[String : AnyObject]]
-        
         
         println("Got notification: \(results)")
         
@@ -172,7 +168,7 @@ class MasterViewController: UITableViewController, UISearchBarDelegate
             
 //            objects.insertObject(congressCritterInfo, atIndex: objects.count) // insert at bottom
 //            objects.insertObject(congressCritterInfo, atIndex: 0) // insert at top
-            objects.insertObject(congressCritterInfo, atIndex: insertPos) // insert in order
+            objects.insertObject(congressCritterInfo, atIndex: insertPos) // insert in alphabetical order
             
             // we get this list in alphabetical order, so insert them at the top and go downward in the order
             // we recieved them

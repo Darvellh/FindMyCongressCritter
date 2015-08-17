@@ -1,6 +1,6 @@
 //
 //  CongressCritterAPI.swift
-//  FIndMyCongressCritter
+//  FindMyCongressCritter
 //
 //  Created by Darvell Hunt on 8/15/15.
 //  Copyright (c) 2015 Darvell Hunt. All rights reserved.
@@ -10,6 +10,7 @@ import Foundation
 
 class CongressCritterAPI
 {
+    // create an API call to get Congress Critter data
     func getJsonData(url urlPath: NSString)
     {
         var url = NSURL(string: urlPath)
@@ -21,14 +22,14 @@ class CongressCritterAPI
             response,
             error -> Void in
 
-            // if we have an error, exit out
             if(error != nil)
             {
+                // if we have an error, exit out
                 println(error.localizedDescription)
             }
             else if (data.length < 100)
             {
-                //if we don't have stufficent data, this request must have failed, get
+                //if we don't have stufficent data, this request must have failed
                 println("Data not big enough, must have not recieved valid result")
             }
             else
@@ -47,6 +48,7 @@ class CongressCritterAPI
                 {
 //                    println("\(results.count) JSON rows returned and parsed into a dictionary")
                     
+                    // Do we have any data?
                     if (results.count != 0)
                     {
                         // success, we have the data in this dictionary!

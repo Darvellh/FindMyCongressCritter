@@ -1,6 +1,6 @@
 //
 //  DetailViewController.swift
-//  FIndMyCongressCritter
+//  FindMyCongressCritter
 //
 //  Created by Darvell Hunt on 8/15/15.
 //  Copyright (c) 2015 Darvell Hunt. All rights reserved.
@@ -10,7 +10,6 @@ import UIKit
 
 class DetailViewController: UIViewController
 {
-
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var detailSummaryLabel: UILabel!
     @IBOutlet weak var navItem: UINavigationItem!

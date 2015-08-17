@@ -1,6 +1,6 @@
 //
-//  FIndMyCongressCritterTests.swift
-//  FIndMyCongressCritterTests
+//  FindMyCongressCritterTests.swift
+//  FindMyCongressCritterTests
 //
 //  Created by Darvell Hunt on 8/15/15.
 //  Copyright (c) 2015 Darvell Hunt. All rights reserved.
