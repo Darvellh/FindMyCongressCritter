@@ -8,34 +8,63 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController
+{
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var detailSummaryLabel: UILabel!
+    @IBOutlet weak var navItem: UINavigationItem!
 
-
-    var detailItem: AnyObject? {
+    var detailItem: CongressCritterData?
+        {
         didSet {
             // Update the view.
             self.configureView()
         }
     }
 
-    func configureView() {
+    func configureView()
+    {
         // Update the user interface for the detail item.
-        if let detail: AnyObject = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+        if let detail: CongressCritterData = self.detailItem
+        {
+            if let label = self.detailDescriptionLabel
+            {
+//                label.text = detail.state
+                
+                label.text = "District: \(detail.district)\nPhone: \(detail.phone)\nOffice: \(detail.office)\nLink: \(detail.link)"
+                
+                var summary: NSString!
+                var name: NSString!
+                var party: NSString!
+                var state: NSString!
+                var district: NSString!
+                var phone: NSString!
+                var office: NSString!
+                var link: NSString!
+            }
+            
+            if let summary = self.detailSummaryLabel
+            {
+                summary.text = detail.summary
+            }
+            
+            if let titleBar = self.navItem
+            {
+                titleBar.title = detail.name
             }
         }
     }
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

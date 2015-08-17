@@ -14,6 +14,12 @@
 		98597C351B7F1417001F6FDA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98597C341B7F1417001F6FDA /* Images.xcassets */; };
 		98597C381B7F1417001F6FDA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98597C361B7F1417001F6FDA /* LaunchScreen.xib */; };
 		98597C441B7F1418001F6FDA /* FIndMyCongressCritterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98597C431B7F1418001F6FDA /* FIndMyCongressCritterTests.swift */; };
+		98597C521B7FAD92001F6FDA /* CongressCritterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98597C511B7FAD92001F6FDA /* CongressCritterData.swift */; };
+		98597C531B7FAD92001F6FDA /* CongressCritterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98597C511B7FAD92001F6FDA /* CongressCritterData.swift */; };
+		98597C551B7FC81C001F6FDA /* CongressCritterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98597C541B7FC81B001F6FDA /* CongressCritterAPI.swift */; };
+		98597C561B7FC81C001F6FDA /* CongressCritterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98597C541B7FC81B001F6FDA /* CongressCritterAPI.swift */; };
+		98597C581B7FE314001F6FDA /* CongressCritterURLMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98597C571B7FE314001F6FDA /* CongressCritterURLMaker.swift */; };
+		98597C591B7FE314001F6FDA /* CongressCritterURLMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98597C571B7FE314001F6FDA /* CongressCritterURLMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,9 @@
 		98597C3D1B7F1418001F6FDA /* FIndMyCongressCritterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FIndMyCongressCritterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98597C421B7F1418001F6FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98597C431B7F1418001F6FDA /* FIndMyCongressCritterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIndMyCongressCritterTests.swift; sourceTree = "<group>"; };
+		98597C511B7FAD92001F6FDA /* CongressCritterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressCritterData.swift; sourceTree = "<group>"; };
+		98597C541B7FC81B001F6FDA /* CongressCritterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressCritterAPI.swift; sourceTree = "<group>"; };
+		98597C571B7FE314001F6FDA /* CongressCritterURLMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressCritterURLMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				98597C2B1B7F1417001F6FDA /* AppDelegate.swift */,
+				98597C541B7FC81B001F6FDA /* CongressCritterAPI.swift */,
+				98597C511B7FAD92001F6FDA /* CongressCritterData.swift */,
+				98597C571B7FE314001F6FDA /* CongressCritterURLMaker.swift */,
 				98597C2D1B7F1417001F6FDA /* MasterViewController.swift */,
 				98597C2F1B7F1417001F6FDA /* DetailViewController.swift */,
 				98597C311B7F1417001F6FDA /* Main.storyboard */,
@@ -215,9 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98597C581B7FE314001F6FDA /* CongressCritterURLMaker.swift in Sources */,
 				98597C301B7F1417001F6FDA /* DetailViewController.swift in Sources */,
 				98597C2E1B7F1417001F6FDA /* MasterViewController.swift in Sources */,
 				98597C2C1B7F1417001F6FDA /* AppDelegate.swift in Sources */,
+				98597C521B7FAD92001F6FDA /* CongressCritterData.swift in Sources */,
+				98597C551B7FC81C001F6FDA /* CongressCritterAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98597C591B7FE314001F6FDA /* CongressCritterURLMaker.swift in Sources */,
+				98597C561B7FC81C001F6FDA /* CongressCritterAPI.swift in Sources */,
 				98597C441B7F1418001F6FDA /* FIndMyCongressCritterTests.swift in Sources */,
+				98597C531B7FAD92001F6FDA /* CongressCritterData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
