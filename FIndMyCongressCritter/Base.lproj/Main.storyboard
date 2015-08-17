@@ -91,9 +91,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" prompt="Enter Last Name, State Abbreviation, or ZIP" id="kbV-Ux-ro3">
+                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="prominent" prompt="Enter Last Name, State Abbrev, or ZIP" id="kbV-Ux-ro3">
                             <rect key="frame" x="0.0" y="64" width="600" height="75"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="7bK-jq-Zjz" id="KTx-gJ-x9a"/>
