@@ -182,6 +182,7 @@
 		98597C1E1B7F1417001F6FDA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Darvell Hunt";
 				TargetAttributes = {
@@ -194,7 +195,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 98597C211B7F1417001F6FDA /* Build configuration list for PBXProject "FindMyCongressCritter" */;
+			buildConfigurationList = 98597C211B7F1417001F6FDA /* Build configuration list for PBXProject "FIndMyCongressCritter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -425,7 +426,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		98597C211B7F1417001F6FDA /* Build configuration list for PBXProject "FindMyCongressCritter" */ = {
+		98597C211B7F1417001F6FDA /* Build configuration list for PBXProject "FIndMyCongressCritter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				98597C451B7F1418001F6FDA /* Debug */,

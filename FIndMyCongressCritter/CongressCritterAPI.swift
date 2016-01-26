@@ -13,7 +13,7 @@ class CongressCritterAPI
     // create an API call to get Congress Critter data
     func getJsonData(url urlPath: NSString)
     {
-        var url = NSURL(string: urlPath)
+        var url = NSURL(string: urlPath as String)
         
         var session = NSURLSession.sharedSession()
         var task = session.dataTaskWithURL(url, completionHandler:

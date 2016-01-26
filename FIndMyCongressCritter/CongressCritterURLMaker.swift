@@ -46,7 +46,7 @@ class CongressCritterURLMaker
         if ((searchStr.length == 5) && ((searchStr.integerValue) > 0))
         {
             // This is a zip code, so query by zip
-            returnURL = urlBasePath + urlAllByZip + searchStr + "&output=json"
+            returnURL = urlBasePath + urlAllByZip + (searchStr as String) + "&output=json"
         }
         else if (searchStr.length == 2)
         {
@@ -54,12 +54,12 @@ class CongressCritterURLMaker
             if (searchSenator)
             {
                 // search senator data by state
-                returnURL = urlBasePath + urlSensByState + searchStr + "&output=json"
+                returnURL = urlBasePath + urlSensByState + (searchStr as String) + "&output=json"
             }
             else
             {
                 // search represetnative data by state
-                returnURL = urlBasePath + urlRepsByState + searchStr + "&output=json"
+                returnURL = urlBasePath + urlRepsByState + (searchStr as String) + "&output=json"
             }
         }
         else
@@ -68,12 +68,12 @@ class CongressCritterURLMaker
             if (searchSenator)
             {
                 // search senator data by name
-                returnURL = urlBasePath + urlSensByName + searchStr + "&output=json"
+                returnURL = urlBasePath + urlSensByName + (searchStr as String) + "&output=json"
             }
             else
             {
                 // search representative data by name
-                returnURL = urlBasePath + urlRepsByName + searchStr + "&output=json"
+                returnURL = urlBasePath + urlRepsByName + (searchStr as String) + "&output=json"
             }
         }
         

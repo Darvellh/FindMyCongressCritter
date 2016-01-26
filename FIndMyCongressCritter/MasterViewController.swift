@@ -66,10 +66,10 @@ class MasterViewController: UITableViewController, UISearchBarDelegate
     {
         if segue.identifier == "showDetail"
         {
-            if let indexPath = self.tableView.indexPathForSelectedRow()
+            if let indexPath = self.tableView.indexPathForSelectedRow!
             {
                 let object = objects[indexPath.row] as CongressCritterData
-                let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController; as!detailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
@@ -129,11 +129,11 @@ class MasterViewController: UITableViewController, UISearchBarDelegate
     func gotDataResponseObserver(notification: NSNotification)
     {
         var critterDataDictionary: NSDictionary
-        critterDataDictionary = notification.object as NSDictionary
+        critterDataDictionary = notification.object as! NSDictionary
         
-        let results = critterDataDictionary["results"]! as [[String : AnyObject]]
+        let results = critterDataDictionary["results"]! as! [[String : AnyObject]]
         
-        println("Got notification: \(results)")
+        print("Got notification: \(results)")
         
         var insertPos = 0;
         
@@ -141,13 +141,13 @@ class MasterViewController: UITableViewController, UISearchBarDelegate
         for critterDetail in results
         {
             // extract all of the fields from the JSON data
-            let nameStr     = critterDetail["name"]! as String
-            let partyStr    = critterDetail["party"]! as String
-            let stateStr    = critterDetail["state"]! as String
-            let districtStr = critterDetail["district"]! as String
-            let phoneStr    = critterDetail["phone"]! as String
-            let officeStr   = critterDetail["office"]! as String
-            let linkStr     = critterDetail["link"]! as String
+            let nameStr     = critterDetail["name"]! as! String
+            let partyStr    = critterDetail["party"]! as! String
+            let stateStr    = critterDetail["state"]! as! String
+            let districtStr = critterDetail["district"]! as! String
+            let phoneStr    = critterDetail["phone"]! as! String
+            let officeStr   = critterDetail["office"]! as! String
+            let linkStr     = critterDetail["link"]! as! String
             
             var critterSummary: NSString
             
@@ -155,14 +155,14 @@ class MasterViewController: UITableViewController, UISearchBarDelegate
             whichHouse = "Sen. "
             
             // House Reps have district numbers, so if this is a number, mark this critter as a Rep
-            if ((districtStr.toInt()) > 0)
+            if ((districtStr.int()) > 0)
             {
                 whichHouse = "Rep. "
             }
             
             critterSummary = whichHouse + nameStr + " (" + partyStr + ") " + stateStr
             
-            println("\(critterSummary)")
+            print("\(critterSummary)")
             
             let congressCritterInfo = CongressCritterData(summary: critterSummary, name: nameStr, party: partyStr, state: stateStr, district: districtStr, phone: phoneStr, office: officeStr, link: linkStr)
             
@@ -198,7 +198,7 @@ class MasterViewController: UITableViewController, UISearchBarDelegate
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
-        let object = objects[indexPath.row] as CongressCritterData
+        let object = objects[indexPath.row]as! CongressCritterData
         cell.textLabel?.text = object.summary
         return cell
     }
